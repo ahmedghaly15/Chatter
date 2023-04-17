@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-import '/screens/auth_screen.dart';
+import '../shared/constants.dart';
+import 'auth/auth_screen.dart';
 import '/screens/home_screen.dart';
 import '/theme.dart';
 
@@ -19,9 +19,7 @@ class MySplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<MySplashScreen> {
   // ============ Storing User Email Using SharedPrererences ============
   goToApp() async {
-    final prefs = await SharedPreferences.getInstance();
-    String? val = prefs.getString('mail');
-    if (val == null) {
+    if (uId == null) {
       // Go To AuthScreen
       Get.off(() => const AuthScreen(), transition: Transition.fadeIn);
     } else {

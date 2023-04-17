@@ -114,3 +114,13 @@ TextStyle get bodyStyle3 {
     ),
   );
 }
+
+TextStyle get caption {
+  return GoogleFonts.inter(
+    textStyle: const TextStyle(
+      fontSize: 12,
+      color: Colors.grey,
+      height: 1.7,
+    ),
+  );
+}

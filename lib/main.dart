@@ -1,6 +1,10 @@
+import 'package:chat_app/cubit/cubit.dart';
+import 'package:chat_app/shared/bloc_observer.dart';
+import 'package:chat_app/shared/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
@@ -8,6 +12,7 @@ import '/screens/splash_screen.dart';
 import '/services/theme_services.dart';
 import '/theme.dart';
 import 'firebase_options.dart';
+import 'network/local/cache_helper.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,26 +27,37 @@ Future<void> main() async {
       options: DefaultFirebaseOptions.currentPlatform,
     );
 
-    // =================== Initialize Get Storage To Get The Stored Theme ===================
+    //===================== Initializing GetStorage =====================
     await GetStorage.init();
 
+    //===================== Observing My Bloc =====================
+    Bloc.observer = MyBlocObserver();
+
+    //===================== Initializing SharedPref =====================
+    await CacheHelper.initSharedPref();
+
+    uId = CacheHelper.getStringData(key: 'uId');
+
     // =================== Running The App ===================
-    runApp(const MyApp());
+    runApp(const ChatterApp());
   });
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class ChatterApp extends StatelessWidget {
+  const ChatterApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      theme: Themes.lightTheme,
-      darkTheme: Themes.darkTheme,
-      themeMode: ThemeServices().theme,
-      title: 'Chatter App',
-      debugShowCheckedModeBanner: false,
-      home: const MySplashScreen(),
+    return BlocProvider(
+      create: (context) => ChatterAppCubit()..getUserData(uId),
+      child: GetMaterialApp(
+        theme: Themes.lightTheme,
+        darkTheme: Themes.darkTheme,
+        themeMode: ThemeServices().theme,
+        title: 'Chatter App',
+        debugShowCheckedModeBanner: false,
+        home: const MySplashScreen(),
+      ),
     );
   }
 }
