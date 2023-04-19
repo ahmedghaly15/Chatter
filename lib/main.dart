@@ -1,6 +1,3 @@
-import 'package:chat_app/cubit/cubit.dart';
-import 'package:chat_app/shared/bloc_observer.dart';
-import 'package:chat_app/shared/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,8 +5,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
+import '/cubit/cubit.dart';
 import '/screens/splash_screen.dart';
 import '/services/theme_services.dart';
+import '/shared/bloc_observer.dart';
+import '/shared/constants.dart';
 import '/theme.dart';
 import 'firebase_options.dart';
 import 'network/local/cache_helper.dart';
