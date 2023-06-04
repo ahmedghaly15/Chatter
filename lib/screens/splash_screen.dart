@@ -34,8 +34,9 @@ class _SplashScreenState extends State<MySplashScreen> {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(
-        systemNavigationBarColor: Get.isDarkMode ? darkGreyClr : Colors.white,
-        statusBarColor: Get.isDarkMode ? darkGreyClr : Colors.white,
+        systemNavigationBarColor:
+            Get.isDarkMode ? darkGreyClr : Colors.transparent,
+        statusBarColor: Get.isDarkMode ? darkGreyClr : Colors.transparent,
       ),
     );
     // Time Of Showing Splash Screen
