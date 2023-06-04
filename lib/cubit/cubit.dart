@@ -113,7 +113,6 @@ class ChatterAppCubit extends Cubit<ChatterAppStates> {
 
   //============ Getting All Users ============
   void getAllUsers() {
-    users = [];
     if (users.isEmpty)
       FirebaseFirestore.instance.collection('users').get().then((value) {
         for (var element in value.docs) {
