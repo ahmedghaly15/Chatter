@@ -12,7 +12,7 @@ import '/cubit/states.dart';
 import '/models/message_model.dart';
 import '/models/user_model.dart';
 import '/shared/constants.dart';
-import '/theme.dart';
+import '../services/theme.dart';
 
 class ChatDetailsScreen extends StatelessWidget {
   final UserModel userModel;

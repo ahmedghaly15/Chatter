@@ -1,4 +1,4 @@
-import 'package:chat_app/theme.dart';
+import 'package:chat_app/services/theme.dart';
 import 'package:flutter/material.dart';
 
 class DefaultButton extends StatelessWidget {

@@ -44,10 +44,9 @@ app.*.map.json
 /android/app/release
 
 ##
-test
 web
 windows
 macos
 linux
 .vscode
-README.md
+

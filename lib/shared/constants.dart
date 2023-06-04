@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 
 import '/network/local/cache_helper.dart';
 import '/screens/auth/auth_screen.dart';
-import '/theme.dart';
+import '../services/theme.dart';
 
 //=========== For Switching Between The State Of The Snack Bar ===========
 enum SnackBarStates { success, error, warning }

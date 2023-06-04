@@ -12,7 +12,7 @@ import '/models/user_model.dart';
 import '/shared/components/default_button.dart';
 import '/shared/components/input_field.dart';
 import '/shared/constants.dart';
-import '/theme.dart';
+import '../services/theme.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

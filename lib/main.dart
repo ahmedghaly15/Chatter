@@ -10,7 +10,7 @@ import '/screens/splash_screen.dart';
 import '/services/theme_services.dart';
 import '/shared/bloc_observer.dart';
 import '/shared/constants.dart';
-import '/theme.dart';
+import 'services/theme.dart';
 import 'firebase_options.dart';
 import 'network/local/cache_helper.dart';
 

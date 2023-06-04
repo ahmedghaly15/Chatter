@@ -10,7 +10,7 @@ import '/models/user_model.dart';
 import '/screens/profile_screen.dart';
 import '/services/theme_services.dart';
 import '/shared/constants.dart';
-import '/theme.dart';
+import '../services/theme.dart';
 import 'chat_details_screen.dart';
 
 class HomeScreen extends StatelessWidget {

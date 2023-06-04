@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import '../shared/constants.dart';
 import 'auth/auth_screen.dart';
 import '/screens/home_screen.dart';
-import '/theme.dart';
+import '../services/theme.dart';
 
 class MySplashScreen extends StatefulWidget {
   const MySplashScreen({super.key});
