@@ -13,7 +13,43 @@ A Flutter app uses real-time messaging application that allows users to communic
 
 ## App Structure
 
+```
+lib 
+├── cubit
+│
+├── models
+│
+├── network
+│   ├── local
+│   └──── cache_helper.dart
+│
+├── screens
+│   ├── auth 
+│   └──── cubit
+│   └──── auth_screen.dart
+│   │
+│   ├── splash_screen.dart
+│   │
+│   ├── home_screen.dart
+│   │
+│   ├── chat_details_screen.dart
+│   │
+│   └── profile_screen.dart
+│
+├── services
+│   ├── themes
+│   └── theme_services
+│
+├── shared
+│   ├── components
+│   ├── bloc_observer.dart
+│   └── constants.dart
+│
+├── firebase_options.dart
+│
+└── main.dart
 
+```
 
 ## Features
 - `Firebase authentication`: The app uses Firebase Authentication to provide secure user authentication and authorization.
