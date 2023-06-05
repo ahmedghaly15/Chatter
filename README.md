@@ -10,6 +10,10 @@ A Flutter app uses real-time messaging application that allows users to communic
 
 ## Preview
 
+<div style="display: flex" > 
+  <img style="display: inline-block" src="https://github.com/ahmedghaly15/Chatter-App/assets/108659381/eac2ed51-5406-4b84-b44c-045d65b053f7" width= "300" height = "600"/>
+  
+</div>
 
 ## App Structure
 
@@ -56,6 +60,7 @@ lib
 - `Cloud firestore1`: The app uses Firebase Cloud Firestore to store users profile images and images they send to each other in chats.
 - `Dark theme`: The app supports a dark theme, which provides a comfortable viewing experience in low-light environments.
 - `Real-time messaging`: The app utilizes Firebase Realtime Database to enable real-time messaging, allowing users to communicate with each other instantly.
+- `Search`: allows users to find specific conversations or messages within a chat by entering relevant keywords or phrases.
 - `Profile customization`: Users have the ability to set their profile image and bio, allowing them to personalize their account and make it more recognizable to other users.
 
 ## Getting Started
