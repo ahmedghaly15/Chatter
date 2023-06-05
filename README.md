@@ -12,8 +12,9 @@ A Flutter app uses real-time messaging application that allows users to communic
 
 <div style="display: flex" > 
   <img style="display: inline-block" src="https://github.com/ahmedghaly15/Chatter-App/assets/108659381/eac2ed51-5406-4b84-b44c-045d65b053f7" width= "300" height = "600"/>
-  
 </div>
+
+https://github.com/ahmedghaly15/Chatter-App/assets/108659381/e5cae32f-ffce-4b7b-94c5-44deb47514ec
 
 ## App Structure
 
